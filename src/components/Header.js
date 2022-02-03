@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     backgroundColor: colors.buttons,
-    height: parameters.headerHeight
+    height: parameters.headerHeight,
+    paddingVertical: 5,
   },
 
   iconContainer: {
