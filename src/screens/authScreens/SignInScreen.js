@@ -16,16 +16,16 @@ export default function SignInScreen() {
     <View>
       <Header title='MINHA CONTA' />
 
-      <View style={styles.titleContainer}>
+      <View style={styles.containerTitle}>
         <Text style={title}>Entrar</Text>
       </View>
 
-      <View style={styles.subtitleContainer}>
+      <View style={styles.containerSubtitle}>
         <Text style={styles.subtitle}>Digite o e-mail e senha</Text>
         <Text style={styles.subtitle}>cadastrados em sua conta</Text>
       </View>
 
-      <View style={styles.formContainer}>
+      <View style={styles.containerForm}>
         <View>
           <TextInput style={styles.inputEmail} placeholder='Email' ref={inputEmail} />
         </View>
@@ -54,11 +54,11 @@ export default function SignInScreen() {
       </View>
 
       <View style={styles.containerButton}>
-            <Button 
-              title='Entrar'
-              buttonStyle = {parameters.styledButton}
-              titleStyle = {parameters.buttonTitle}
-            />
+        <Button 
+          title='Entrar'
+          buttonStyle = {parameters.styledButton}
+          titleStyle = {parameters.buttonTitle}
+        />
       </View>
 
       <View style={styles.containerTextForgetPass}>
@@ -100,7 +100,6 @@ export default function SignInScreen() {
           titleStyle={styles.createButtonTitle}
         />
       </View>
-
     </View>
   );
 }
@@ -110,12 +109,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  titleContainer: {
+  containerTitle: {
     marginLeft: 20,
     marginTop: 10,
   },
 
-  subtitleContainer: {
+  containerSubtitle: {
     alignItems: 'center',
     marginTop: 10,
   },
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 
-  formContainer: {
+  containerForm: {
     marginTop: 20,
   },
 
