@@ -6,7 +6,7 @@ import * as Animatable from 'react-native-animatable';
 import Header from '../../components/Header';
 import { colors, parameters, title } from '../../global/styles';
 
-export default function SignInScreen() {
+export default function SignInScreen({navigation}) {
 
   const [inputPasswordFocussed, setInputPasswordFocussed] = useState(false);
   const inputEmail = useRef(1);
@@ -14,7 +14,7 @@ export default function SignInScreen() {
 
   return (
     <View>
-      <Header title='MINHA CONTA' />
+      <Header title='MINHA CONTA' navigation={navigation} />
 
       <View style={styles.containerTitle}>
         <Text style={title}>Entrar</Text>

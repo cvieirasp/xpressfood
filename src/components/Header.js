@@ -4,7 +4,7 @@ import { Icon } from 'react-native-elements';
 
 import { colors, parameters } from '../global/styles';
 
-export default function Header({title, typeIcon='arrow-left'}) {
+export default function Header({navigation, title, typeIcon='arrow-left'}) {
   return (
     <View style={styles.header}>
       <View style={styles.iconContainer}>
@@ -13,7 +13,10 @@ export default function Header({title, typeIcon='arrow-left'}) {
           name={typeIcon}
           color = {colors.headerText}
           size={28}
-          onPress = {() => {}} />
+          onPress = {() => {
+            navigation.goBack();
+          }}
+        />
        </View>
       <View>
         <Text style={styles.headerText}>{title}</Text>

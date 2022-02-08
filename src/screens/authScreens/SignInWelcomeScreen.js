@@ -6,7 +6,7 @@ import * as Animatable from 'react-native-animatable';
 
 import { colors, parameters, title } from '../../global/styles';
 
-export default function SignInWelcomeScreen() {
+export default function SignInWelcomeScreen({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.containerTitle}>
@@ -52,6 +52,9 @@ export default function SignInWelcomeScreen() {
             title='Entrar'
             buttonStyle = {parameters.styledButton}
             titleStyle = {parameters.buttonTitle}
+            onPress={() => {
+              navigation.navigate('SignInScreen');
+            }}
           />
         </View>
 
