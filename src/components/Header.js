@@ -6,8 +6,8 @@ import { colors, parameters } from '../global/styles';
 
 export default function Header({navigation, title, typeIcon='arrow-left'}) {
   return (
-    <View style={styles.header}>
-      <View style={styles.iconContainer}>
+    <View style={styles.container}>
+      <View style={styles.containerIcon}>
         <Icon
           type='material-community'
           name={typeIcon}
@@ -26,14 +26,14 @@ export default function Header({navigation, title, typeIcon='arrow-left'}) {
 }
 
 const styles = StyleSheet.create({
-  header: {
+  container: {
     flexDirection: 'row',
     backgroundColor: colors.buttons,
     height: parameters.headerHeight,
     paddingVertical: 5,
   },
 
-  iconContainer: {
+  containerIcon: {
     marginLeft: 20
   },
 
@@ -42,5 +42,5 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     marginLeft: 30
-  }
+  },
 });
